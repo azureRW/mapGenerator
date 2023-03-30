@@ -9,7 +9,7 @@ from math import floor
 from array import array
 
 
-Z= np.array( data.get("array"))
+Z= np.array( data.get("map"))
 print(Z.shape)
 xArray = np.linspace(0, 10, 100)
 yArray = np.linspace(0, 10, 100)
@@ -19,5 +19,5 @@ ax.plot_surface(X, Y, Z, cmap = cm.gist_earth) # 用地形高度顏色來著色
 ax.set_xlabel('x')
 ax.set_ylabel('y')
 ax.set_zlabel('z')
-plt.title('Perlin noise')
+plt.title('map')
 plt.show()
