@@ -1,4 +1,3 @@
-import mod.TestModel;
 import service.CallPython;
 import service.OutputService;
 import service.PerlinNoise;
@@ -11,7 +10,7 @@ public class MapGenerator {
 
     public static void main(String[] args) throws IOException {
 
-        double Z[][] = PerlinNoise.noise(3,1);
+        double[][] Z = PerlinNoise.noise(1,0.5);
         Map<String,Object> map = new HashMap<>();
         map.put("map",Z);
         OutputService.out(map);
