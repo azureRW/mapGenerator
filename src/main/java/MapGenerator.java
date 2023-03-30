@@ -10,7 +10,7 @@ public class MapGenerator {
 
     public static void main(String[] args) throws IOException {
 
-        double[][] Z = PerlinNoise.noise(1,0.5);
+        double[][] Z = PerlinNoise.noise(1,0.6);
         Map<String,Object> map = new HashMap<>();
         map.put("map",Z);
         OutputService.out(map);

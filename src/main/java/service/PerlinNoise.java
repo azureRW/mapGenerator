@@ -12,7 +12,7 @@ public class PerlinNoise {
         Random rand = new Random();
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[0].length; j++) {
-                matrix[i][j] = rand.nextDouble() * 2 - 1;
+                matrix[i][j] = (rand.nextDouble() * 2 - 1);
             }
         }
 
@@ -35,6 +35,7 @@ public class PerlinNoise {
                 double b = blending(x2 - xArray[i] * frequency) * matrix[x1][y2] + blending(xArray[i] * frequency - x1) * matrix[x2][y2];
 
                 Z[i][j] = blending(y2 - yArray[j] * frequency) * a + blending(yArray[j] * frequency - y1) * b;
+                Z[i][j]   = Math.round( Z[i][j]  * 1000.0) / 1000.0;
             }
         }
 
